@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: charyulupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: charyulupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: charyulupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: charyulupipelinesjavascriptdocker 
+          image: gscontreg.azurecr.io/charyulupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
